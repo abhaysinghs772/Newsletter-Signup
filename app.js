@@ -63,12 +63,6 @@ app.post('/failure.html', function(req, res){
     res.redirect('/');
 });
 
-app.listen(proccess.env.PORT || 3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('server is started at port 3000');
 });
-
-// API_KEY
-// 9b0a42a9207c188e5642f208f5bfe631-us6
-
-// List_id
-// 451aff3db8
