@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const https = require('https');
+require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -36,7 +37,7 @@ app.post('/', function (req, res) {
 
     const options = {
         method: "POST",
-        auth: "blabla:9b0a42a9207c188e5642f208f5bfe631-us6"
+        auth: process.env.AUTH
     }
 
     const request = https.request(url, options, function (response) {
